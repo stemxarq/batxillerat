@@ -1,0 +1,24 @@
+// Jugant amb variables
+
+int cont1 = 0; // Variable global
+
+void setup() {
+  Serial.begin(9600);//inicia el porto sèrie
+}
+
+void loop() {
+  int cont2 = 0;
+  cont1++; // Suma 1 a la vble: cont1 = cont1 + 1
+  Serial.println(cont1); //Objecte Serial, mètode .println()
+  cont2++;
+  Serial.println(cont2);
+
+  delay(1000);
+  puertoSerie();
+  delay();
+}
+
+void puertoSerie() {
+  Serial.println(cont1); //Imprime valor del contador 1
+  Serial.println(cont2); //Imprime valor del contador 2
+}
